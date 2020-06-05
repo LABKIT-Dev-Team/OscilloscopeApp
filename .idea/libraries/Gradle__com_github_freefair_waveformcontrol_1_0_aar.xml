@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="Gradle: com.github.freefair:waveformcontrol:1.0@aar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/8d3f2cee2d0d8e5340571f1fb8affb81/jetified-waveformcontrol-1.0/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/8d3f2cee2d0d8e5340571f1fb8affb81/jetified-waveformcontrol-1.0/res" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.freefair/waveformcontrol/1.0/5254569b4985874391a7602b067958d9d1c1ba06/waveformcontrol-1.0-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

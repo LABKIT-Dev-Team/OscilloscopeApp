@@ -1,0 +1,29 @@
+<resources>
+
+    <string name="app_name">OscilloscopeApp</string>
+
+    <string name="data_display_panel">readings</string>
+    <string name="voltage1">V1:</string>
+    <string name="voltage2">V2:</string>
+    <string name="frequency1">F1:</string>
+    <string name="frequency2">F2:</string>
+    <string name="volt1">2.33V</string>
+    <string name="volt2">-4.55V</string>
+    <string name="freq1">5.433Khz</string>
+    <string name="freq2">1.22Khz</string>
+
+    <string name="scope_control_panel">scope control panel</string>
+    <string name="channel_1_switch">osc 1</string>
+    <string name="channel_1_switch_name">osc 1</string>
+    <string name="channel_2_switch">osc 2</string>
+    <string name="channel_2_switch_name">osc 2</string>
+    <string name="time_base">time base</string>
+    <string name="pause_play">pause/play</string>
+    <string name="submit_results">submit\nresults</string>
+
+    <string name="a_product_of_reva_university">A product of REVA University</string>
+
+
+
+
+</resources>
