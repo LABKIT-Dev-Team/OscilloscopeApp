@@ -931,6 +931,7 @@ id up
 id useLogo
 id v1
 id v2
+id waveform_area
 id withText
 id wrap
 id wrap_content

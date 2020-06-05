@@ -67,25 +67,25 @@
 
             <com.triggertrap.seekarc.SeekArc
                 android:id="@+id/seekArc"
-                android:padding="20dp"
                 android:layout_width="98dp"
                 android:layout_height="100dp"
                 android:layout_marginStart="32dp"
                 android:layout_marginTop="12dp"
                 android:layout_marginEnd="43dp"
                 android:layout_marginBottom="11dp"
+                android:padding="20dp"
+                android:rotation="180"
                 android:scrollbarSize="1dp"
                 android:soundEffectsEnabled="true"
+                app:arcWidth="1dp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toStartOf="@+id/osc_switch1"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 app:roundEdges="false"
-                app:arcWidth="1dp"
-                android:rotation="180"
-                app:touchInside="true"
                 app:startAngle="30"
-                app:sweepAngle="300" />
+                app:sweepAngle="300"
+                app:touchInside="true" />
 
             <Switch
                 android:id="@+id/osc_switch1"
@@ -128,7 +128,8 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
-            <com.newventuresoftware.waveform.WaveformView
+            <ml.asvsharma.oscilloscopeapp.WaveformView
+                android:id="@+id/waveform_area"
                 android:layout_width="384dp"
                 android:layout_height="297dp"
                 app:layout_constraintBottom_toBottomOf="parent"

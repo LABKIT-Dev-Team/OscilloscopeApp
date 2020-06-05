@@ -1,7 +1,7 @@
-#Fri Jun 05 11:43:01 IST 2020
-base.0=C\:\\Users\\SHREEVALLABHA\\Desktop\\OscilloscopeApp\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\out\\classes.dex
+#Fri Jun 05 19:50:58 IST 2020
+base.0=D\:\\My projects\\OscilloscopeApp\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\out\\classes.dex
 path.1=classes.dex
 renamed.1=classes2.dex
 path.0=classes.dex
 renamed.0=classes.dex
-base.1=C\:\\Users\\SHREEVALLABHA\\Desktop\\OscilloscopeApp\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\out\\classes.dex
+base.1=D\:\\My projects\\OscilloscopeApp\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\out\\classes.dex
