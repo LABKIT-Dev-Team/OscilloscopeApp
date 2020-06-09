@@ -8,56 +8,133 @@
 
     <androidx.cardview.widget.CardView
         android:id="@+id/power_view"
-        android:layout_width="273dp"
-        android:layout_height="71dp"
+        android:layout_width="265dp"
+        android:layout_height="72dp"
         android:layout_marginStart="20dp"
         android:layout_marginTop="12dp"
         android:layout_marginEnd="6dp"
-        android:layout_marginBottom="58dp"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.09"
         app:layout_constraintStart_toEndOf="@+id/oscilloscope_view"
         app:layout_constraintTop_toBottomOf="@+id/control_view">
 
         <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#FFFFFF"
+            tools:layout_editor_absoluteX="56dp"
+            tools:layout_editor_absoluteY="-2dp">
+
+            <Button
+                android:id="@+id/down2"
+                android:layout_width="42dp"
+                android:layout_height="25dp"
+                android:layout_marginTop="11dp"
+                android:layout_marginEnd="144dp"
+                android:layout_marginBottom="6dp"
+                android:background="@drawable/round_button"
+                android:onClick="onClick"
+                android:text="@string/down2"
+                android:textColor="@android:color/white"
+                android:textSize="10sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/up2"
+                app:layout_constraintVertical_bias="1.0" />
+
+            <Button
+                android:id="@+id/up2"
+                android:layout_width="42dp"
+                android:layout_height="25dp"
+                android:layout_marginTop="4dp"
+                android:background="@drawable/round_button"
+                android:onClick="onClick"
+                android:text="@string/up"
+                android:textColor="@android:color/white"
+                android:textSize="10sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.339"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
             <Switch
                 android:id="@+id/time_base_switch"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="24dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginBottom="9dp"
+                android:onClick="onClick"
                 android:text="@string/time_base"
-                app:layout_constraintBottom_toBottomOf="parent"
+                android:textColor="#009688"
+                app:layout_constraintBottom_toTopOf="@+id/run_stop_switch"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.918"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.477" />
+                app:layout_constraintTop_toTopOf="parent" />
 
             <Switch
                 android:id="@+id/run_stop_switch"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
-                android:layout_marginEnd="16dp"
-                android:layout_marginBottom="23dp"
+                android:layout_marginBottom="4dp"
+                android:onClick="onClick"
                 android:text="@string/pause_play"
+                android:textColor="#009688"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.916"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <Button
+                android:id="@+id/up1"
+                android:layout_width="42dp"
+                android:layout_height="25dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginEnd="16dp"
+                android:background="@drawable/round_button"
+                android:onClick="onClick"
+                android:text="@string/up"
+                android:textColor="@android:color/white"
+                android:textSize="10sp"
+                app:layout_constraintEnd_toStartOf="@+id/up2"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
+
+            <Button
+                android:id="@+id/down1"
+                android:layout_width="42dp"
+                android:layout_height="25dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="11dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="6dp"
+                android:background="@drawable/round_button"
+                android:onClick="onClick"
+                android:text="@string/down"
+                android:textColor="@android:color/white"
+                android:textSize="10sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/down2"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/up1" />
+
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.cardview.widget.CardView>
 
     <androidx.cardview.widget.CardView
         android:id="@+id/control_view"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="265dp"
+        android:layout_height="109dp"
         android:layout_marginStart="20dp"
         android:layout_marginTop="15dp"
         android:layout_marginEnd="6dp"
         android:layout_marginBottom="16dp"
         app:layout_constraintBottom_toTopOf="@+id/power_view"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.13"
         app:layout_constraintStart_toEndOf="@+id/oscilloscope_view"
         app:layout_constraintTop_toBottomOf="@+id/display_view">
 
@@ -65,27 +142,26 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content">
 
-            <com.triggertrap.seekarc.SeekArc
-                android:id="@+id/seekArc"
-                android:layout_width="98dp"
-                android:layout_height="100dp"
+            <it.beppi.knoblibrary.Knob
+                android:id="@+id/time_base_arc"
+                android:layout_width="100dp"
+                android:layout_height="90dp"
                 android:layout_marginStart="32dp"
                 android:layout_marginTop="12dp"
                 android:layout_marginEnd="43dp"
                 android:layout_marginBottom="11dp"
-                android:padding="20dp"
-                android:rotation="180"
-                android:scrollbarSize="1dp"
-                android:soundEffectsEnabled="true"
-                app:arcWidth="1dp"
+                app:kBorderColor="#00000000"
+                app:kCircularIndicatorColor="#03DAC5"
+                app:kIndicatorColor="#03DAC5"
+                app:kKnobCenterColor="#03DAC5"
+                app:kKnobColor="#009688"
+                app:kSelectedStateMarkerColor="#03DAC5"
+                app:kStateMarkersAccentColor="#03DAC5"
+                app:kStateMarkersColor="#03DAC5"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toStartOf="@+id/osc_switch1"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:roundEdges="false"
-                app:startAngle="30"
-                app:sweepAngle="300"
-                app:touchInside="true" />
+                app:layout_constraintTop_toTopOf="parent" />
 
             <Switch
                 android:id="@+id/osc_switch1"
@@ -94,7 +170,9 @@
                 android:layout_marginTop="16dp"
                 android:layout_marginEnd="18dp"
                 android:layout_marginBottom="10dp"
+                android:onClick="onClick"
                 android:text="@string/channel_1_switch"
+                android:textColor="#009688"
                 app:layout_constraintBottom_toTopOf="@+id/osc_switch2"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
@@ -107,11 +185,14 @@
                 android:layout_marginTop="10dp"
                 android:layout_marginEnd="18dp"
                 android:layout_marginBottom="17dp"
+                android:onClick="onClick"
                 android:text="@string/channel_2_switch"
+                android:textColor="#009688"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toEndOf="@+id/seekArc"
+                app:layout_constraintStart_toEndOf="@+id/time_base_arc"
                 app:layout_constraintTop_toBottomOf="@+id/osc_switch1" />
+
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.cardview.widget.CardView>
 
@@ -119,10 +200,11 @@
         android:id="@+id/oscilloscope_view"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="40dp"
+        android:layout_marginStart="17dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.39">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
@@ -132,23 +214,53 @@
                 android:id="@+id/waveform_area"
                 android:layout_width="384dp"
                 android:layout_height="297dp"
+                android:visibility="visible"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <TextView
+                android:id="@+id/osc_1_status"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/osc_1_status"
+                android:textColor="#069A0C"
+                android:textSize="12sp"
+                app:layout_constraintBottom_toTopOf="@+id/osc_2_status"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.042"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.957" />
+
+            <TextView
+                android:id="@+id/osc_2_status"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:text="@string/osc_2_status"
+                android:textColor="#A7B607"
+                android:textSize="12sp"
+                app:layout_constraintBottom_toBottomOf="@+id/waveform_area"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.046"
+                app:layout_constraintStart_toStartOf="parent" />
+
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.cardview.widget.CardView>
 
     <androidx.cardview.widget.CardView
         android:id="@+id/display_view"
-        android:layout_width="wrap_content"
+        android:layout_width="265dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
-        android:layout_marginTop="57dp"
+        android:layout_marginTop="28dp"
         android:layout_marginEnd="6dp"
-        android:layout_marginBottom="15dp"
-        app:layout_constraintBottom_toTopOf="@+id/control_view"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.14"
         app:layout_constraintStart_toEndOf="@+id/oscilloscope_view"
         app:layout_constraintTop_toTopOf="parent">
 
@@ -163,6 +275,7 @@
                 android:layout_marginStart="48dp"
                 android:layout_marginBottom="16dp"
                 android:text="@string/frequency2"
+                android:textColor="#009688"
                 android:textSize="12sp"
                 android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -176,6 +289,7 @@
                 android:layout_marginTop="9dp"
                 android:layout_marginBottom="17dp"
                 android:text="@string/voltage2"
+                android:textColor="#009688"
                 android:textSize="12sp"
                 android:textStyle="bold"
                 app:layout_constraintBottom_toTopOf="@+id/textView5"
@@ -190,6 +304,7 @@
                 android:layout_marginStart="33dp"
                 android:layout_marginBottom="16dp"
                 android:text="@string/frequency1"
+                android:textColor="#009688"
                 android:textSize="12sp"
                 android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -202,6 +317,7 @@
                 android:layout_marginTop="3dp"
                 android:gravity="center"
                 android:text="@string/data_display_panel"
+                android:textColor="#009688"
                 android:textStyle="bold"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -215,6 +331,7 @@
                 android:layout_marginTop="31dp"
                 android:layout_marginBottom="17dp"
                 android:text="@string/voltage1"
+                android:textColor="#009688"
                 android:textSize="12sp"
                 android:textStyle="bold"
                 app:layout_constraintBottom_toTopOf="@+id/textView3"
@@ -276,5 +393,32 @@
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="36dp"
+        android:gravity="center"
+        android:text="@string/a_product_of_reva_university"
+        android:textSize="10sp"
+        android:textStyle="italic"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.499"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/oscilloscope_view"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <ProgressBar
+        android:id="@+id/progress_bar_connectingdevice"
+        style="@style/Widget.AppCompat.ProgressBar"
+        android:layout_width="74dp"
+        android:layout_height="63dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

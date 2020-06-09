@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="Gradle: com.github.BeppiMenozzi:BalloonPopup:0.2.8@aar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/6daf06f71f7fc78f72888c194eeae3c9/jetified-BalloonPopup-0.2.8/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/6daf06f71f7fc78f72888c194eeae3c9/jetified-BalloonPopup-0.2.8/res" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.BeppiMenozzi/BalloonPopup/0.2.8/b27a3d6200dfb27fa5d95a652759e5de2c0005b8/BalloonPopup-0.2.8-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

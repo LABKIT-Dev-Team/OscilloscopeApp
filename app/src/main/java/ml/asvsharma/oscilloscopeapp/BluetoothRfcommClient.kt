@@ -1,4 +1,4 @@
-/*package ml.asvsharma.oscilloscopeapp
+package ml.asvsharma.oscilloscopeapp
 
 import android.bluetooth.BluetoothAdapter
 import android.bluetooth.BluetoothDevice
@@ -7,6 +7,7 @@ import android.content.Context
 import android.os.Bundle
 import android.os.Handler
 import android.os.Message
+import android.util.Log
 //import com.sun.xml.internal.ws.streaming.XMLStreamWriterUtil.getOutputStream
 import java.io.IOException
 import java.io.InputStream
@@ -14,6 +15,7 @@ import java.io.OutputStream
 import java.util.*
 
 
+@ExperimentalStdlibApi
 class BluetoothRfcommClient(context: Context?, handler: Handler) {
     // Member fields
     private val mAdapter: BluetoothAdapter
@@ -22,19 +24,45 @@ class BluetoothRfcommClient(context: Context?, handler: Handler) {
     private var mConnectedThread: ConnectedThread? = null
     private var mState: Int
 
+    companion object {
+        // Unique UUID for this application
+        private val MY_UUID: UUID =  //UUID.fromString("fa87c0d0-afac-11de-8a39-0800200c9a66");
+            UUID.fromString("00001101-0000-1000-8000-00805F9B34FB")
+        // Constants that indicate the current connection state
+        const val STATE_NONE = 0 // we're doing nothing
+        //public static final int STATE_LISTEN = 1;     // now listening for incoming connections
+        const val STATE_CONNECTING = 2 // now initiating an outgoing connection
+        const val STATE_CONNECTED = 3 // now connected to a remote device
+    }
+
+
+
+    /**
+     * Constructor. Prepares a new BluetoothChat session.
+     * - context - The UI Activity Context
+     * - handler - A Handler to send messages back to the UI Activity
+     */
+
+    init {
+        mAdapter = BluetoothAdapter.getDefaultAdapter()
+        mState = STATE_NONE
+        mHandler = handler
+    }
+
+
     /**
      * Return the current connection state.  */// Give the new state to the Handler so the UI Activity can update
     /**
      * Set the current state o
      */
-    @get:Synchronized
+
     @set:Synchronized
     var state: Int
         get() = mState
         private set(state) {
             mState = state
             // Give the new state to the Handler so the UI Activity can update
-            mHandler.obtainMessage(OscilloscopeActivity.MESSAGE_STATE_CHANGE, state, -1)
+            mHandler.obtainMessage(OscilloscopeActivity.MESSAGE_STATE_CHANGE, mState, -1)
                 .sendToTarget()
         }
 
@@ -47,7 +75,7 @@ class BluetoothRfcommClient(context: Context?, handler: Handler) {
             mConnectThread!!.cancel()
             mConnectThread = null
         }
-        // Cancel any thread currently running a connection
+        // Cancel any thread curre.ntly running a connection
         if (mConnectedThread != null) {
             mConnectedThread!!.cancel()
             mConnectedThread = null
@@ -104,7 +132,7 @@ class BluetoothRfcommClient(context: Context?, handler: Handler) {
         val msg: Message = mHandler.obtainMessage(OscilloscopeActivity.MESSAGE_DEVICE_NAME)
         val bundle = Bundle()
         bundle.putString(OscilloscopeActivity.DEVICE_NAME, device.name)
-        msg.setData(bundle)
+        msg.data = bundle
         mHandler.sendMessage(msg)
         state = STATE_CONNECTED
     }
@@ -149,7 +177,7 @@ class BluetoothRfcommClient(context: Context?, handler: Handler) {
         val msg: Message = mHandler.obtainMessage(OscilloscopeActivity.MESSAGE_TOAST)
         val bundle = Bundle()
         bundle.putString(OscilloscopeActivity.TOAST, "Unable to connect device")
-        msg.setData(bundle)
+        msg.data = bundle
         mHandler.sendMessage(msg)
     }
 
@@ -162,7 +190,7 @@ class BluetoothRfcommClient(context: Context?, handler: Handler) {
         val msg: Message = mHandler.obtainMessage(OscilloscopeActivity.MESSAGE_TOAST)
         val bundle = Bundle()
         bundle.putString(OscilloscopeActivity.TOAST, "Device connection was lost")
-        msg.setData(bundle)
+        msg.data = bundle
         mHandler.sendMessage(msg)
     }
 
@@ -173,6 +201,18 @@ class BluetoothRfcommClient(context: Context?, handler: Handler) {
      */
     private inner class ConnectThread(private val mmDevice: BluetoothDevice) : Thread() {
         private val mmSocket: BluetoothSocket?
+
+        init {
+            var tmp: BluetoothSocket? = null
+            // Get a BluetoothSocket for a connection with the given BluetoothDevice
+            try {
+                tmp =
+                    mmDevice.createRfcommSocketToServiceRecord(MY_UUID)
+            } catch (e: IOException) { //
+            }
+            mmSocket = tmp
+        }
+
         override fun run() {
             name = "ConnectThread"
             // Always cancel discovery because it will slow down a connection
@@ -194,6 +234,7 @@ class BluetoothRfcommClient(context: Context?, handler: Handler) {
             // Reset the ConnectThread because we're done
             synchronized(this@BluetoothRfcommClient) { mConnectThread = null }
             // Start the connected thread
+            Log.d("CHECK","Connected")
             connected(mmSocket, mmDevice)
         }
 
@@ -204,16 +245,6 @@ class BluetoothRfcommClient(context: Context?, handler: Handler) {
             }
         }
 
-        init {
-            var tmp: BluetoothSocket? = null
-            // Get a BluetoothSocket for a connection with the given BluetoothDevice
-            try {
-                tmp =
-                    mmDevice.createRfcommSocketToServiceRecord(MY_UUID)
-            } catch (e: IOException) { //
-            }
-            mmSocket = tmp
-        }
     }
 
     /**
@@ -223,6 +254,21 @@ class BluetoothRfcommClient(context: Context?, handler: Handler) {
     private inner class ConnectedThread(private val mmSocket: BluetoothSocket?) : Thread() {
         private val mmInStream: InputStream?
         private val mmOutStream: OutputStream?
+
+        init {
+            var tmpIn: InputStream? = null
+            var tmpOut: OutputStream? = null
+            // Get the BluetoothSocket input and output streams
+            try {
+                tmpIn = mmSocket!!.inputStream
+                tmpOut = mmSocket.outputStream
+            } catch (e: IOException) {
+                Log.e("",e.toString())
+            }
+            mmInStream = tmpIn
+            mmOutStream = tmpOut
+        }
+
         override fun run() {
             val buffer = ByteArray(1024)
             var bytes: Int = 0
@@ -236,6 +282,7 @@ class BluetoothRfcommClient(context: Context?, handler: Handler) {
                     mHandler.obtainMessage(OscilloscopeActivity.MESSAGE_READ, bytes, -1, buffer)
                         .sendToTarget()
                 } catch (e: IOException) { //
+                    Log.e("",e.toString())
                     connectionLost()
                     break
                 }
@@ -254,6 +301,8 @@ class BluetoothRfcommClient(context: Context?, handler: Handler) {
                 mHandler.obtainMessage(OscilloscopeActivity.MESSAGE_WRITE, -1, -1, buffer)
                     .sendToTarget()
             } catch (e: IOException) { //
+                Log.e("", e.toString())
+
             }
         }
 
@@ -261,42 +310,14 @@ class BluetoothRfcommClient(context: Context?, handler: Handler) {
             try {
                 mmSocket!!.close()
             } catch (e: IOException) { //
+                Log.e("",e.toString())
+
             }
         }
 
-        init {
-            var tmpIn: InputStream? = null
-            var tmpOut: OutputStream? = null
-            // Get the BluetoothSocket input and output streams
-            try {
-                tmpIn = mmSocket!!.inputStream
-                tmpOut = mmSocket.outputStream
-            } catch (e: IOException) {
-            }
-            mmInStream = tmpIn
-            mmOutStream = tmpOut
-        }
+
     }
 
-    companion object {
-        // Unique UUID for this application
-        private val MY_UUID: UUID =  //UUID.fromString("fa87c0d0-afac-11de-8a39-0800200c9a66");
-            UUID.fromString("00001101-0000-1000-8000-00805F9B34FB")
-        // Constants that indicate the current connection state
-        const val STATE_NONE = 0 // we're doing nothing
-        //public static final int STATE_LISTEN = 1;     // now listening for incoming connections
-        const val STATE_CONNECTING = 2 // now initiating an outgoing connection
-        const val STATE_CONNECTED = 3 // now connected to a remote device
-    }
 
-    /**
-     * Constructor. Prepares a new BluetoothChat session.
-     * - context - The UI Activity Context
-     * - handler - A Handler to send messages back to the UI Activity
-     */
-    init {
-        mAdapter = BluetoothAdapter.getDefaultAdapter()
-        mState = STATE_NONE
-        mHandler = handler
-    }
-}*/
+
+}

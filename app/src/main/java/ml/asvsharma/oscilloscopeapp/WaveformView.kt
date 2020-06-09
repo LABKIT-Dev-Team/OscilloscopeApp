@@ -142,10 +142,10 @@ class WaveformView(context: Context?, attrs: AttributeSet?) :
             ch2_data[x] = ch2_pos
         }
         plot_thread = WaveformPlotThread(holder, this)
-        ch1_color.setColor(Color.GREEN)
-        ch2_color.setColor(Color.YELLOW)
-        grid_paint.setColor(Color.rgb(100, 100, 100))
-        cross_paint.setColor(Color.rgb(70, 100, 70))
-        outline_paint.setColor(Color.WHITE)
+        ch1_color.color = Color.GREEN
+        ch2_color.color = Color.YELLOW
+        grid_paint.color = Color.rgb(100, 100, 100)
+        cross_paint.color = Color.rgb(70, 100, 70)
+        outline_paint.color = Color.WHITE
     }
 }

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".BluetoothDevicesActivity">
+
+    <TextView
+        android:id="@+id/textview_qn"
+        android:layout_width="328dp"
+        android:layout_height="69dp"
+        android:fontFamily="sans-serif"
+        android:text="@string/is_your_phone_s_bluetooth_connected_to_your_labkit"
+        android:textColor="#009688"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/check_bluetooth"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.493"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.363" />
+
+    <Button
+        android:id="@+id/check_bluetooth"
+        android:layout_width="128dp"
+        android:layout_height="74dp"
+        android:layout_marginBottom="56dp"
+        android:background="@drawable/buttons"
+        android:fontFamily="sans-serif-condensed-medium"
+        android:text="@string/connect_to_labkit"
+        android:textColor="#FFFFFF"
+        android:textSize="14sp"
+        android:textStyle="normal"
+        app:layout_constraintBottom_toTopOf="@+id/guidlines_textview"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="OnClick" />
+
+    <TextView
+        android:id="@+id/guidlines_textview"
+        android:layout_width="265dp"
+        android:layout_height="89dp"
+        android:layout_marginBottom="28dp"
+        android:fontFamily="sans-serif"
+        android:text="@string/_1_choose"
+        android:textColor="#009688"
+        android:textSize="12sp"
+        android:textStyle="italic"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

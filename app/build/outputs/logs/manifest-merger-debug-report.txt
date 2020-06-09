@@ -1,11 +1,13 @@
 -- Merging decision tree log ---
 manifest
-ADDED from D:\My projects\OscilloscopeApp\app\src\main\AndroidManifest.xml:2:1-32:12
-INJECTED from D:\My projects\OscilloscopeApp\app\src\main\AndroidManifest.xml:2:1-32:12
-INJECTED from D:\My projects\OscilloscopeApp\app\src\main\AndroidManifest.xml:2:1-32:12
-INJECTED from D:\My projects\OscilloscopeApp\app\src\main\AndroidManifest.xml:2:1-32:12
+ADDED from D:\My projects\OscilloscopeApp\app\src\main\AndroidManifest.xml:2:1-34:12
+INJECTED from D:\My projects\OscilloscopeApp\app\src\main\AndroidManifest.xml:2:1-34:12
+INJECTED from D:\My projects\OscilloscopeApp\app\src\main\AndroidManifest.xml:2:1-34:12
+INJECTED from D:\My projects\OscilloscopeApp\app\src\main\AndroidManifest.xml:2:1-34:12
 MERGED from [com.github.freefair:waveformcontrol:1.0] C:\Users\SHREEVALLABHA\.gradle\caches\transforms-2\files-2.1\8d3f2cee2d0d8e5340571f1fb8affb81\jetified-waveformcontrol-1.0\AndroidManifest.xml:2:1-13:12
 MERGED from [com.github.Triggertrap:SeekArc:v1.1] C:\Users\SHREEVALLABHA\.gradle\caches\transforms-2\files-2.1\cd951c7287e6143cf788034dbaf8ede0\jetified-SeekArc-v1.1\AndroidManifest.xml:25:1-40:12
+MERGED from [com.github.BeppiMenozzi:Knob:1.9.0] C:\Users\SHREEVALLABHA\.gradle\caches\transforms-2\files-2.1\ff500c54d925cde89c0303d4fe11c386\jetified-Knob-1.9.0\AndroidManifest.xml:2:1-17:12
+MERGED from [com.github.BeppiMenozzi:BalloonPopup:0.2.8] C:\Users\SHREEVALLABHA\.gradle\caches\transforms-2\files-2.1\6daf06f71f7fc78f72888c194eeae3c9\jetified-BalloonPopup-0.2.8\AndroidManifest.xml:2:1-17:12
 MERGED from [androidx.appcompat:appcompat:1.1.0] C:\Users\SHREEVALLABHA\.gradle\caches\transforms-2\files-2.1\a8776343fdac874fa977e09d507079eb\appcompat-1.1.0\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.core:core-ktx:1.3.0] C:\Users\SHREEVALLABHA\.gradle\caches\transforms-2\files-2.1\08a3e641d0512ce4cfded9e74ba4cfdf\jetified-core-ktx-1.3.0\AndroidManifest.xml:2:1-9:12
 MERGED from [androidx.constraintlayout:constraintlayout:1.1.3] C:\Users\SHREEVALLABHA\.gradle\caches\transforms-2\files-2.1\d38c63deeca963c558fe516b1169310c\constraintlayout-1.1.3\AndroidManifest.xml:2:1-11:12
@@ -29,22 +31,22 @@ MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\SHREEVALLABHA\.g
 MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] C:\Users\SHREEVALLABHA\.gradle\caches\transforms-2\files-2.1\2b76bbbf1f93cbf5dadfb1df63fad850\lifecycle-livedata-2.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.0.0] C:\Users\SHREEVALLABHA\.gradle\caches\transforms-2\files-2.1\0214de92541da20a6f29d5a1d1caac7a\lifecycle-livedata-core-2.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.arch.core:core-runtime:2.0.0] C:\Users\SHREEVALLABHA\.gradle\caches\transforms-2\files-2.1\aab972487a8f59c32bc2363f2b46ffa6\core-runtime-2.0.0\AndroidManifest.xml:17:1-22:12
-INJECTED from D:\My projects\OscilloscopeApp\app\src\main\AndroidManifest.xml:2:1-32:12
-INJECTED from D:\My projects\OscilloscopeApp\app\src\main\AndroidManifest.xml:2:1-32:12
-INJECTED from D:\My projects\OscilloscopeApp\app\src\main\AndroidManifest.xml:2:1-32:12
+INJECTED from D:\My projects\OscilloscopeApp\app\src\main\AndroidManifest.xml:2:1-34:12
+INJECTED from D:\My projects\OscilloscopeApp\app\src\main\AndroidManifest.xml:2:1-34:12
+INJECTED from D:\My projects\OscilloscopeApp\app\src\main\AndroidManifest.xml:2:1-34:12
 	package
 		ADDED from D:\My projects\OscilloscopeApp\app\src\main\AndroidManifest.xml:4:5-43
 		INJECTED from D:\My projects\OscilloscopeApp\app\src\main\AndroidManifest.xml
 		INJECTED from D:\My projects\OscilloscopeApp\app\src\main\AndroidManifest.xml
 	android:versionName
 		INJECTED from D:\My projects\OscilloscopeApp\app\src\main\AndroidManifest.xml
-		ADDED from D:\My projects\OscilloscopeApp\app\src\main\AndroidManifest.xml:2:1-32:12
+		ADDED from D:\My projects\OscilloscopeApp\app\src\main\AndroidManifest.xml:2:1-34:12
 		INJECTED from D:\My projects\OscilloscopeApp\app\src\main\AndroidManifest.xml
 	xmlns:tools
 		ADDED from D:\My projects\OscilloscopeApp\app\src\main\AndroidManifest.xml:3:5-51
 	android:versionCode
 		INJECTED from D:\My projects\OscilloscopeApp\app\src\main\AndroidManifest.xml
-		ADDED from D:\My projects\OscilloscopeApp\app\src\main\AndroidManifest.xml:2:1-32:12
+		ADDED from D:\My projects\OscilloscopeApp\app\src\main\AndroidManifest.xml:2:1-34:12
 		INJECTED from D:\My projects\OscilloscopeApp\app\src\main\AndroidManifest.xml
 	xmlns:android
 		ADDED from D:\My projects\OscilloscopeApp\app\src\main\AndroidManifest.xml:2:11-69
@@ -61,10 +63,18 @@ uses-permission#android.permission.BLUETOOTH_ADMIN
 ADDED from D:\My projects\OscilloscopeApp\app\src\main\AndroidManifest.xml:9:5-74
 	android:name
 		ADDED from D:\My projects\OscilloscopeApp\app\src\main\AndroidManifest.xml:9:22-71
+uses-permission#android.permission.VIBRATE
+ADDED from D:\My projects\OscilloscopeApp\app\src\main\AndroidManifest.xml:10:5-66
+	android:name
+		ADDED from D:\My projects\OscilloscopeApp\app\src\main\AndroidManifest.xml:10:22-63
 application
-ADDED from D:\My projects\OscilloscopeApp\app\src\main\AndroidManifest.xml:11:5-30:19
+ADDED from D:\My projects\OscilloscopeApp\app\src\main\AndroidManifest.xml:12:5-32:19
 MERGED from [com.github.Triggertrap:SeekArc:v1.1] C:\Users\SHREEVALLABHA\.gradle\caches\transforms-2\files-2.1\cd951c7287e6143cf788034dbaf8ede0\jetified-SeekArc-v1.1\AndroidManifest.xml:34:5-38:19
 MERGED from [com.github.Triggertrap:SeekArc:v1.1] C:\Users\SHREEVALLABHA\.gradle\caches\transforms-2\files-2.1\cd951c7287e6143cf788034dbaf8ede0\jetified-SeekArc-v1.1\AndroidManifest.xml:34:5-38:19
+MERGED from [com.github.BeppiMenozzi:Knob:1.9.0] C:\Users\SHREEVALLABHA\.gradle\caches\transforms-2\files-2.1\ff500c54d925cde89c0303d4fe11c386\jetified-Knob-1.9.0\AndroidManifest.xml:11:5-15:19
+MERGED from [com.github.BeppiMenozzi:Knob:1.9.0] C:\Users\SHREEVALLABHA\.gradle\caches\transforms-2\files-2.1\ff500c54d925cde89c0303d4fe11c386\jetified-Knob-1.9.0\AndroidManifest.xml:11:5-15:19
+MERGED from [com.github.BeppiMenozzi:BalloonPopup:0.2.8] C:\Users\SHREEVALLABHA\.gradle\caches\transforms-2\files-2.1\6daf06f71f7fc78f72888c194eeae3c9\jetified-BalloonPopup-0.2.8\AndroidManifest.xml:11:5-15:19
+MERGED from [com.github.BeppiMenozzi:BalloonPopup:0.2.8] C:\Users\SHREEVALLABHA\.gradle\caches\transforms-2\files-2.1\6daf06f71f7fc78f72888c194eeae3c9\jetified-BalloonPopup-0.2.8\AndroidManifest.xml:11:5-15:19
 MERGED from [androidx.constraintlayout:constraintlayout:1.1.3] C:\Users\SHREEVALLABHA\.gradle\caches\transforms-2\files-2.1\d38c63deeca963c558fe516b1169310c\constraintlayout-1.1.3\AndroidManifest.xml:9:5-20
 MERGED from [androidx.constraintlayout:constraintlayout:1.1.3] C:\Users\SHREEVALLABHA\.gradle\caches\transforms-2\files-2.1\d38c63deeca963c558fe516b1169310c\constraintlayout-1.1.3\AndroidManifest.xml:9:5-20
 MERGED from [androidx.core:core:1.3.0] C:\Users\SHREEVALLABHA\.gradle\caches\transforms-2\files-2.1\94f20d27a10319ac7cc954b79a2e42ae\core-1.3.0\AndroidManifest.xml:24:5-89
@@ -74,42 +84,42 @@ MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] C:\Users\SH
 	android:appComponentFactory
 		ADDED from [androidx.core:core:1.3.0] C:\Users\SHREEVALLABHA\.gradle\caches\transforms-2\files-2.1\94f20d27a10319ac7cc954b79a2e42ae\core-1.3.0\AndroidManifest.xml:24:18-86
 	android:supportsRtl
-		ADDED from D:\My projects\OscilloscopeApp\app\src\main\AndroidManifest.xml:16:9-35
+		ADDED from D:\My projects\OscilloscopeApp\app\src\main\AndroidManifest.xml:17:9-35
 	android:label
-		ADDED from D:\My projects\OscilloscopeApp\app\src\main\AndroidManifest.xml:14:9-41
+		ADDED from D:\My projects\OscilloscopeApp\app\src\main\AndroidManifest.xml:15:9-41
 	android:roundIcon
-		ADDED from D:\My projects\OscilloscopeApp\app\src\main\AndroidManifest.xml:15:9-54
+		ADDED from D:\My projects\OscilloscopeApp\app\src\main\AndroidManifest.xml:16:9-54
 	android:icon
-		ADDED from D:\My projects\OscilloscopeApp\app\src\main\AndroidManifest.xml:13:9-43
+		ADDED from D:\My projects\OscilloscopeApp\app\src\main\AndroidManifest.xml:14:9-43
 		REJECTED from [com.github.Triggertrap:SeekArc:v1.1] C:\Users\SHREEVALLABHA\.gradle\caches\transforms-2\files-2.1\cd951c7287e6143cf788034dbaf8ede0\jetified-SeekArc-v1.1\AndroidManifest.xml:36:9-45
 	android:allowBackup
-		ADDED from D:\My projects\OscilloscopeApp\app\src\main\AndroidManifest.xml:12:9-35
+		ADDED from D:\My projects\OscilloscopeApp\app\src\main\AndroidManifest.xml:13:9-35
 	android:theme
-		ADDED from D:\My projects\OscilloscopeApp\app\src\main\AndroidManifest.xml:17:9-40
+		ADDED from D:\My projects\OscilloscopeApp\app\src\main\AndroidManifest.xml:18:9-40
 	tools:replace
-		ADDED from D:\My projects\OscilloscopeApp\app\src\main\AndroidManifest.xml:18:9-37
-activity#ml.asvsharma.oscilloscopeapp.DeviceListActivity
-ADDED from D:\My projects\OscilloscopeApp\app\src\main\AndroidManifest.xml:19:9-65
+		ADDED from D:\My projects\OscilloscopeApp\app\src\main\AndroidManifest.xml:19:9-37
+activity#ml.asvsharma.oscilloscopeapp.BluetoothDevicesActivity
+ADDED from D:\My projects\OscilloscopeApp\app\src\main\AndroidManifest.xml:20:9-26:20
 	android:name
-		ADDED from D:\My projects\OscilloscopeApp\app\src\main\AndroidManifest.xml:19:19-53
-activity#ml.asvsharma.oscilloscopeapp.OscilloscopeActivity
-ADDED from D:\My projects\OscilloscopeApp\app\src\main\AndroidManifest.xml:20:9-29:20
-	android:screenOrientation
-		ADDED from D:\My projects\OscilloscopeApp\app\src\main\AndroidManifest.xml:22:13-50
-	tools:ignore
-		ADDED from D:\My projects\OscilloscopeApp\app\src\main\AndroidManifest.xml:23:13-53
-	android:name
-		ADDED from D:\My projects\OscilloscopeApp\app\src\main\AndroidManifest.xml:21:13-49
+		ADDED from D:\My projects\OscilloscopeApp\app\src\main\AndroidManifest.xml:20:19-59
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from D:\My projects\OscilloscopeApp\app\src\main\AndroidManifest.xml:24:13-28:29
+ADDED from D:\My projects\OscilloscopeApp\app\src\main\AndroidManifest.xml:21:13-25:29
 action#android.intent.action.MAIN
-ADDED from D:\My projects\OscilloscopeApp\app\src\main\AndroidManifest.xml:25:17-69
+ADDED from D:\My projects\OscilloscopeApp\app\src\main\AndroidManifest.xml:22:17-69
 	android:name
-		ADDED from D:\My projects\OscilloscopeApp\app\src\main\AndroidManifest.xml:25:25-66
+		ADDED from D:\My projects\OscilloscopeApp\app\src\main\AndroidManifest.xml:22:25-66
 category#android.intent.category.LAUNCHER
-ADDED from D:\My projects\OscilloscopeApp\app\src\main\AndroidManifest.xml:27:17-77
+ADDED from D:\My projects\OscilloscopeApp\app\src\main\AndroidManifest.xml:24:17-77
 	android:name
-		ADDED from D:\My projects\OscilloscopeApp\app\src\main\AndroidManifest.xml:27:27-74
+		ADDED from D:\My projects\OscilloscopeApp\app\src\main\AndroidManifest.xml:24:27-74
+activity#ml.asvsharma.oscilloscopeapp.OscilloscopeActivity
+ADDED from D:\My projects\OscilloscopeApp\app\src\main\AndroidManifest.xml:27:9-31:20
+	android:screenOrientation
+		ADDED from D:\My projects\OscilloscopeApp\app\src\main\AndroidManifest.xml:29:13-50
+	tools:ignore
+		ADDED from D:\My projects\OscilloscopeApp\app\src\main\AndroidManifest.xml:30:13-53
+	android:name
+		ADDED from D:\My projects\OscilloscopeApp\app\src\main\AndroidManifest.xml:28:13-49
 uses-sdk
 INJECTED from D:\My projects\OscilloscopeApp\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from D:\My projects\OscilloscopeApp\app\src\main\AndroidManifest.xml
@@ -118,6 +128,10 @@ MERGED from [com.github.freefair:waveformcontrol:1.0] C:\Users\SHREEVALLABHA\.gr
 MERGED from [com.github.freefair:waveformcontrol:1.0] C:\Users\SHREEVALLABHA\.gradle\caches\transforms-2\files-2.1\8d3f2cee2d0d8e5340571f1fb8affb81\jetified-waveformcontrol-1.0\AndroidManifest.xml:7:5-9:41
 MERGED from [com.github.Triggertrap:SeekArc:v1.1] C:\Users\SHREEVALLABHA\.gradle\caches\transforms-2\files-2.1\cd951c7287e6143cf788034dbaf8ede0\jetified-SeekArc-v1.1\AndroidManifest.xml:30:5-32:41
 MERGED from [com.github.Triggertrap:SeekArc:v1.1] C:\Users\SHREEVALLABHA\.gradle\caches\transforms-2\files-2.1\cd951c7287e6143cf788034dbaf8ede0\jetified-SeekArc-v1.1\AndroidManifest.xml:30:5-32:41
+MERGED from [com.github.BeppiMenozzi:Knob:1.9.0] C:\Users\SHREEVALLABHA\.gradle\caches\transforms-2\files-2.1\ff500c54d925cde89c0303d4fe11c386\jetified-Knob-1.9.0\AndroidManifest.xml:7:5-9:41
+MERGED from [com.github.BeppiMenozzi:Knob:1.9.0] C:\Users\SHREEVALLABHA\.gradle\caches\transforms-2\files-2.1\ff500c54d925cde89c0303d4fe11c386\jetified-Knob-1.9.0\AndroidManifest.xml:7:5-9:41
+MERGED from [com.github.BeppiMenozzi:BalloonPopup:0.2.8] C:\Users\SHREEVALLABHA\.gradle\caches\transforms-2\files-2.1\6daf06f71f7fc78f72888c194eeae3c9\jetified-BalloonPopup-0.2.8\AndroidManifest.xml:7:5-9:41
+MERGED from [com.github.BeppiMenozzi:BalloonPopup:0.2.8] C:\Users\SHREEVALLABHA\.gradle\caches\transforms-2\files-2.1\6daf06f71f7fc78f72888c194eeae3c9\jetified-BalloonPopup-0.2.8\AndroidManifest.xml:7:5-9:41
 MERGED from [androidx.appcompat:appcompat:1.1.0] C:\Users\SHREEVALLABHA\.gradle\caches\transforms-2\files-2.1\a8776343fdac874fa977e09d507079eb\appcompat-1.1.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.appcompat:appcompat:1.1.0] C:\Users\SHREEVALLABHA\.gradle\caches\transforms-2\files-2.1\a8776343fdac874fa977e09d507079eb\appcompat-1.1.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.core:core-ktx:1.3.0] C:\Users\SHREEVALLABHA\.gradle\caches\transforms-2\files-2.1\08a3e641d0512ce4cfded9e74ba4cfdf\jetified-core-ktx-1.3.0\AndroidManifest.xml:5:5-7:41
