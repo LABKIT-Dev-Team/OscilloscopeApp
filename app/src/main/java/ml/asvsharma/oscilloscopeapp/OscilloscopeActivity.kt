@@ -153,19 +153,32 @@ class OscilloscopeActivity : AppCompatActivity() {
             if(readampscale){
                 //Toast.makeText(this,ampscale[time_base_arc.state],Toast.LENGTH_SHORT).show()
                 vibrator.vibrate(40)
-                if (ch_1isOn) {
+
+                if(ch_1isOn and ch_2isOn){
                     amp1 = ampscale[time_base_arc.state]
-                    ch1_index = time_base_arc.state.toByte()
-                    val text = "osc 1 : $amp1 and $display_timebase"
-                    osc_1_status.text = text
-                    sendMessage(String(byteArrayOf(ADJ_VERTICAL, CHANNEL1, ch1_index)))
-                }
-                if (ch_2isOn) {
                     amp2 = ampscale[time_base_arc.state]
+                    ch1_index = time_base_arc.state.toByte()
                     ch2_index = time_base_arc.state.toByte()
-                    val text = "osc 2 : $amp2 and $display_timebase"
+                    var text = "osc 1 : $amp1 and $display_timebase"
+                    osc_1_status.text = text
+                    text = "osc 2 : $amp2 and $display_timebase"
                     osc_2_status.text = text
-                    sendMessage(String(byteArrayOf(ADJ_VERTICAL, CHANNEL2, ch2_index)))
+                    sendMessage(String(byteArrayOf(ADJ_VERTICAL, CHANNEL1,ch1_index, CHANNEL2,ch2_index)))
+                }else{
+                    if (ch_1isOn) {
+                        amp1 = ampscale[time_base_arc.state]
+                        ch1_index = time_base_arc.state.toByte()
+                        val text = "osc 1 : $amp1 and $display_timebase"
+                        osc_1_status.text = text
+                        sendMessage(String(byteArrayOf(ADJ_VERTICAL, CHANNEL1, ch1_index)))
+                    }
+                    if(ch_2isOn) {
+                        amp2 = ampscale[time_base_arc.state]
+                        ch2_index = time_base_arc.state.toByte()
+                        val text = "osc 2 : $amp2 and $display_timebase"
+                        osc_2_status.text = text
+                        sendMessage(String(byteArrayOf(ADJ_VERTICAL, CHANNEL2, ch2_index)))
+                    }
                 }
                 if(!(ch_1isOn) and !(ch_2isOn)){
                     Toast.makeText(this,"Choose any of the channel to change the amplitude scale",Toast.LENGTH_SHORT).show()
