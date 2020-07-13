@@ -272,6 +272,7 @@ class OscilloscopeActivity : AppCompatActivity() {
                     var x = 0
                     while (x < data_length) {
                         val raw = UByte(readBuf[x])
+                        Log.d("HERE",raw.toString())
                         if (raw > MAX_LEVEL) {
                             if (raw == DATA_START) {
                                 bDataAvailable = true
